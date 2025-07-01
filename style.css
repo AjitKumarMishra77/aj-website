@@ -1,0 +1,182 @@
+body {
+  font-family: 'Segoe UI', sans-serif;
+  background: #ffeef2;
+  color: #333;
+  margin: 0;
+  padding: 0;
+  overflow-x: hidden;
+}
+
+.container {
+  max-width: 700px;
+  margin: 40px auto;
+  padding: 20px;
+  background: white;
+  border-radius: 12px;
+  text-align: center;
+  box-shadow: 0 5px 15px rgba(0,0,0,0.1);
+}
+
+h1 span {
+  color: #e91e63;
+}
+
+.profile-pic {
+  width: 120px;
+  height: 120px;
+  border-radius: 50%;
+  margin-bottom: 15px;
+  object-fit: cover;
+  box-shadow: 0 0 8px #e91e63;
+}
+
+.friends {
+  list-style: none;
+  padding: 0;
+  margin: 10px 0 30px 0;
+}
+
+.friends li {
+  font-size: 18px;
+  margin-bottom: 8px;
+}
+
+.secret-button {
+  padding: 10px 20px;
+  font-size: 16px;
+  background: #e91e63;
+  color: white;
+  border: none;
+  border-radius: 8px;
+  cursor: pointer;
+  transition: background 0.3s;
+}
+
+.secret-button:hover {
+  background: #c2185b;
+}
+
+.proposal h1 {
+  color: #d81b60;
+  margin-bottom: 20px;
+}
+
+.options button {
+  padding: 10px 15px;
+  margin: 10px;
+  font-size: 16px;
+  background-color: #f48fb1;
+  color: white;
+  border: none;
+  border-radius: 6px;
+  cursor: pointer;
+  transition: 0.2s;
+}
+
+.options button:hover {
+  background-color: #ec407a;
+}
+
+@media (max-width: 600px) {
+  .container {
+    margin: 20px;
+    padding: 15px;
+  }
+
+  .profile-pic {
+    width: 100px;
+    height: 100px;
+  }
+}
+
+/* Special Styling for Sister */
+.special-sis {
+  font-family: 'Dancing Script', cursive;
+  font-size: 24px;
+  color: #d81b60;
+  font-weight: bold;
+  text-shadow: 1px 1px 3px #f8bbd0;
+  display: inline-block;
+}
+
+/* Romantic Style for Proposal Page */
+.romantic-text {
+  font-family: 'Great Vibes', cursive;
+  font-size: 28px;
+  color: #d81b60;
+  text-align: center;
+  text-shadow: 1px 1px 4px #f8bbd0;
+}
+
+.proposal p {
+  font-size: 20px;
+  margin-bottom: 30px;
+}
+
+/* Heart Animation */
+.heart {
+  position: fixed;
+  top: -20px;
+  width: 20px;
+  height: 20px;
+  background: red;
+  transform: rotate(45deg);
+  animation: fall linear forwards;
+  z-index: 999;
+}
+
+.heart::before,
+.heart::after {
+  content: '';
+  position: absolute;
+  width: 20px;
+  height: 20px;
+  background: red;
+  border-radius: 50%;
+}
+
+.heart::before {
+  top: -10px;
+  left: 0;
+}
+
+.heart::after {
+  top: 0;
+  left: -10px;
+}
+
+@keyframes fall {
+  to {
+    transform: translateY(100vh) rotate(360deg);
+    opacity: 0;
+  }
+}
+
+.special-sis {
+  font-family: 'Dancing Script', cursive;
+  font-size: 26px;
+  font-weight: bold;
+  color: #e91e63;
+  text-shadow: 0 0 10px #ffccda, 0 0 20px #f48fb1;
+  position: relative;
+  display: inline-block;
+  animation: pulse 2s infinite ease-in-out;
+}
+
+.special-sis::after {
+  content: " 💕";
+  animation: floatHeart 1.5s ease-in-out infinite;
+  display: inline-block;
+}
+
+@keyframes pulse {
+  0% { transform: scale(1); }
+  50% { transform: scale(1.06); }
+  100% { transform: scale(1); }
+}
+
+@keyframes floatHeart {
+  0% { transform: translateY(0); opacity: 1; }
+  50% { transform: translateY(-6px); opacity: 0.7; }
+  100% { transform: translateY(0); opacity: 1; }
+}
